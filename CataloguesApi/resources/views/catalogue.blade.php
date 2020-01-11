@@ -26,7 +26,7 @@
               </div>
 
            </div>
-           <div class="h4 text-left pl-5 pb-2">{{ $catalogue->where('id', 1)->first()->name }}</div>
+           <div class="h4 text-left pl-5 pb-2">{{ $catalogue->where('id', 1)->first()->name ?? "Category Not Available" }}</div>
            <div class="row pb-5">
                <div class="col-3 w-100">
                   Oceans<a href="/videos1/1"><img alt="Ocean.jpg" src="http://vjs.zencdn.net/v/oceans.png" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>
@@ -38,10 +38,10 @@
                   Startrails<a href="/videos1/9"><img alt="Startrails.jpg" src="https://images.unsplash.com/photo-1523911420251-f3e985effe56?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>
                </div>
                <div class="col-3 w-100">
-                  Movie 4<img alt="Star Wars The Rise of Skywalker poster.jpg" src="//upload.wikimedia.org/wikipedia/en/a/af/Star_Wars_The_Rise_of_Skywalker_poster.jpg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;">
+                  <div style="color:red;">Not Available</div><img alt="VideoNotAvailable.jpg" src="https://image.flaticon.com/icons/svg/813/813734.svg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;">
                </div>
            </div>
-           <div class="h4 text-left pl-5 pb-2 pt-2">{{ $catalogue->where('id', 2)->first()->name }}</div>
+           <div class="h4 text-left pl-5 pb-2 pt-2">{{ $catalogue->where('id', 2)->first()->name ?? "Category Not Available" }}</div>
            <div class="row  pb-5">
                <div class="col-3 w-100">
                   Elephants Dream<a href="/videos1/2"><img alt="Elephants_dream.jpg" src="http://d2zihajmogu5jn.cloudfront.net/elephantsdream/poster.png" decoding="async" width="220" height="290" data-file-width="259" data-file-height="290" style="border:1px solid #9999;"></a>
@@ -53,23 +53,23 @@
                   Tears Of Steel<a href="/videos1/7"><img alt="Tears Of Steel.jpg" src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/images/TearsOfSteel.jpg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>
                </div>
                <div class="col-3 w-100">
-                  Movie 4<img alt="Star Wars The Rise of Skywalker poster.jpg" src="//upload.wikimedia.org/wikipedia/en/a/af/Star_Wars_The_Rise_of_Skywalker_poster.jpg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;">
-                </div>
+                  <div style="color:red;">Not Available</div><img alt="VideoNotAvailable.jpg" src="https://image.flaticon.com/icons/svg/813/813734.svg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;">
+               </div>
            </div>
-           <div class="h4 text-left pl-5 pb-2 pt-2">{{ $catalogue->where('id', 3)->first()->name }}</div>
+           <div class="h4 text-left pl-5 pb-2 pt-2">{{ $catalogue->where('id', 3)->first()->name ?? "Category Not Available" }}</div>
            <div class="row pb-5">
                <div class="col-3 w-100">
                   Big Buck Bunny<a href="/videos1/5"><img alt="BigBuckBunny.jpg" src="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x23406" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>
                </div>
                <div class="col-3 w-100">
-                  Toy Story<a href="/videos1/4"><img alt="ToyStorys.jpg" src="http://www.html5videoplayer.net/poster/toystory.jpg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>
+                  Robot<a href="/videos1/3"><img alt="Robot.jpg" src="https://images.unsplash.com/photo-1518314916381-77a37c2a49ae?ixlib=rb-1.2.1&amp;auto=format&amp;fit=crop&amp;w=1000&amp;q=80" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>
                </div>
                <div class="col-3 w-100">
-                 Movie 3<img alt="Bad Boys for Life - teaser poster.jpg" src="//upload.wikimedia.org/wikipedia/en/thumb/3/31/Bad_Boys_for_Life_-_teaser_poster.jpg/220px-Bad_Boys_for_Life_-_teaser_poster.jpg" decoding="async" width="220" height="290" data-file-width="259" data-file-height="290" style="border:1px solid #9999;">
+                  <div style="color:red;">Not Available</div><a href="#"><img alt="VideoNotAvailable.jpg" src="https://image.flaticon.com/icons/svg/813/813734.svg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>
                </div>
                <div class="col-3 w-100">
-                  Movie 4<img alt="Bad Boys for Life - teaser poster.jpg" src="//upload.wikimedia.org/wikipedia/en/thumb/3/31/Bad_Boys_for_Life_-_teaser_poster.jpg/220px-Bad_Boys_for_Life_-_teaser_poster.jpg" decoding="async" width="220" height="290" data-file-width="259" data-file-height="290" style="border:1px solid #9999;">
-                </div>
+                  <div style="color:red;">Not Available</div><img alt="VideoNotAvailable.jpg" src="https://image.flaticon.com/icons/svg/813/813734.svg" decoding="async" width="220" height="290" data-file-width="259" data-file-height="290" style="border:1px solid #9999;">
+               </div>
            </div>
        </div>
        <script src="dist/app.js"></script>
