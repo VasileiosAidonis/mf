@@ -86,13 +86,13 @@ class BillingController extends Controller
         $username = Config::get('constants.USERNAME');
         //$username1 = "NoName";
 
-        return view('billing', [
-            'billing' => $billing,
-            'username' => $username,
-            //'username1' => $username1,
-        ]);
+  //      return view('billing', [
+  //          'billing' => $billing,
+  //          'username' => $username,
+  //          //'username1' => $username1,
+  //      ]);
 
-        //return $this->successResponse($billing);
+        return $this->successResponse($billing);
     }
 
     /**

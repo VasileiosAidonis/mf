@@ -74,7 +74,7 @@ class BillingController extends Controller
                           Response::HTTP_CREATED
                           ));
     }
-    
+
     /**
     * Create one new billing
     * @return Illuminate\Http\Response
