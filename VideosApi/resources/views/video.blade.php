@@ -47,6 +47,27 @@
        </video>
     </div>
 
+    <div class="pt-5 d-flex" style="padding-left:150px;">
+       <?php
+         $video_category = $video->category;
+         $video_name = $video->name;
+       ?>
+       <div style="font-size:120%;">
+          Because you watched a <strong>{{ $video->category }}</strong> Video :
+       </div>
+       <div style="font-size:110%;">
+         @foreach ($videos as $video)
+           @if (($video->category == $video_category) && ($video->name != $video_name))
+              <div class="pt-1 d-flex" style=" padding-left:20px;">
+                {{ $video->name }} &nbsp;<a href="/videos1/{{ $video->id }}">  Watch Now</a>
+              </div>
+           @endif
+         @endforeach
+       </div>
+    </div>
+    <div class="text-center" style="font-size:140%; padding-top:100px;">
+       <a href="/catalogues1/1">Back to catalogues
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="http://vjs.zencdn.net/5.10.2/video.js"></script>

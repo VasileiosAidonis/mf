@@ -25,12 +25,17 @@ class VideoController extends Controller
     * Fetch views of the videos
     * @return Illuminate\Http\Response
     */
-    public function views($video)
+    public function views($videos)
     {
-      $video = Video::findOrFail($video);
+      $video = Video::findOrFail($videos);
+
+      $videos = Video::all();
+
+      //dd($videos->where('category', 'Documentary'));
 
       return view('video', [
           'video' => $video,
+          'videos' => $videos,
       ]);
     }
 
@@ -41,9 +46,9 @@ class VideoController extends Controller
     */
     public function index()
     {
-      $billing = Video::all();
+      $video = Video::all();
 
-      return $this->successResponse($billing);
+      return $this->successResponse($video);
        //return view('app');
     }
 
@@ -73,7 +78,7 @@ class VideoController extends Controller
     */
     public function show($video)
     {
-       $video = Video::findOrFail($video);       
+       $video = Video::findOrFail($video);
 
        return $this->successResponse($video);
     }
