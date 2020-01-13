@@ -15,8 +15,8 @@
     <!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
     <script src="https://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
 </head>
-<body>
-  <div class="container" style="background-color: #E8E7E7;">
+<body style="background-image:linear-gradient(-90deg, #868686, #E6E6E6, black, #760C0C, black, #E6E6E6, #868686)">
+  <div class="container" style="background-color: #E8E7E7; border-left:1px solid #A1A1A1; border-right:1px solid #A1A1A1;">
     <a class="navbar-brand d-flex pt-4">
        <div><img src="/svg/mf.svg" style="height:40px; border-right:2px solid #333;" class="pr-3 pl-5"></div>
        <div class="h2 pl-3">MyFlix</div>
@@ -71,7 +71,7 @@
          @endforeach
        </div>
     </div>
-    <div class="text-center" style="font-size:150%; padding-top:120px; padding-bottom:100px;">
+    <div class="text-center" style="font-size:150%; padding-top:120px; padding-bottom:70px;">
        <div style="border:2px solid #B5127E; margin-left:38%; margin-right:38%; background-color: #B5127E; border-radius:20px;">
           <a href="/catalogues1/1" style="color:white;">
              Back to catalogues

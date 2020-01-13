@@ -20,9 +20,9 @@
           <div class="h5 pr-5 d-flex justify-content-end"><a href="/">Home</div></a>
        </a>
        <div id="app">
-           <div class="text-center">
-              <div class="p-3" style="font-size:160%;">
-                <div class="pb-1" style="border:2px; border-radius:10px; margin-left:17%; margin-right:17%; background-image:linear-gradient(-90deg, #B56016, #B51616, #760C0C, #B51616, #B56016); color:white;">
+           <div class="pt-1 text-center">
+              <div class="pb-3" style="font-size:160%;">
+                <div class="pb-1" style="border:2px; border-radius:10px; margin-left:17%; margin-right:17%; background-image:linear-gradient(-90deg, #B56016, #B51616, #760C0C, #B51616, #B56016); color:white; opacity:92%">
                     Select Movies from our {{ 4 ?? $catalogue->count() }} Categories
                  </div>
               </div>

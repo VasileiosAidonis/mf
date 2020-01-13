@@ -14,7 +14,7 @@
        style="background-position: 50% 50%; background-image: url(&quot;https://images.pexels.com/photos/1182127/pexels-photo-1182127.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=1850&amp;w=860&quot;);"
        data-image-width="1024" data-image-height= auto;>
 
-  <div class="container" style="background: white; opacity:93%;">
+  <div class="container" style="background: white; opacity:94%;">
     <form action="/billings" enctype="multipart/form-data" method="post">
 
         <a class="navbar-brand d-flex pt-4  text-center">
@@ -28,15 +28,15 @@
              style="color: brown; border:1px solid #333; border-radius:10px; margin-left: 12%; margin-right: 12%;">
              Have access to the best Movie Service with only 1£ /month
         </div>
-          <div class="col-5 offset-3">
-            <div class="h1 p-1 text-center">Payment Method</div>
+          <div>
+            <div class="h1 p-1 pt-2 text-center">Payment Method</div>
 
             <div class="text-center">
                 <label for="card_type" class="col-form-label">Card Type</label>
                 <input id="card_type"
                        type="text"
                        class="form-control"
-                       style="border-radius:10px;"
+                       style="border-radius:10px; width:40%; margin-left:30%; margin-right:30%;"
                        name="card_type"
                        required autocomplete="card_type">
             </div>
@@ -45,7 +45,7 @@
                 <input id="name"
                        type="text"
                        class="form-control"
-                       style="border-radius:10px;"
+                       style="border-radius:10px; width:40%; margin-left:30%; margin-right:30%;"
                        name="name"
                        required autocomplete="name">
             </div>
@@ -54,7 +54,7 @@
                 <input id="number_16"
                        type="number"
                        class="form-control"
-                       style="border-radius:10px;"
+                       style="border-radius:10px; width:40%; margin-left:30%; margin-right:30%;"
                        name="number_16"
                        required autocomplete="number_16">
             </div>
@@ -63,10 +63,10 @@
                 <input id="number_3"
                        type="number"
                        class="form-control"
-                       style="border-radius:10px;"
+                       style="border-radius:10px; width:40%; margin-left:30%; margin-right:30%;"
                        name="number_3"
                        required autocomplete="number_3">
-            </div>            
+            </div>
 
             <div class="pt-3 text-center" style="padding-bottom:375px;">
                  <button class="btn btn-primary">Confirm</button>

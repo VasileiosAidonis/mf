@@ -7,6 +7,8 @@ use App\Register;
 use App\Traits\ApiResponser;
 use Illuminate\Http\Response;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
+use Illuminate\Contracts\Routing\ResponseFactory;
 
 class LoginController extends Controller
 {
@@ -29,7 +31,7 @@ class LoginController extends Controller
     */
     public function views()
     {
-        return view('login');
+        return view('login',['error' => [] ]);
     }
 
     /**
@@ -80,17 +82,20 @@ class LoginController extends Controller
 
          $login = Login::create($request->all());
 
-         // RETURN THE BILLING PAGE HERE
-         // Check if works through APIGATEWAY   UNCOMMENT!!!!!!!!!!!
-
-         //return redirect()->route('billings');
 
          return $this->successResponse($login, Response::HTTP_CREATED);
 
       } else {
 
-         return $this->errorResponse('Invalid Username or Password',
-                     Response::HTTP_UNPROCESSABLE_ENTITY);
+        $error = $this->errorResponse('Invalid Username or Password',
+                    Response::HTTP_UNPROCESSABLE_ENTITY);
+
+        //$error = 'Invalid Username or Password';
+
+        // TRying to return response with view to work on APIGATEWAY
+        return view('login', ['error' => $error]);
+
+        return $error;
       }
     }
 
