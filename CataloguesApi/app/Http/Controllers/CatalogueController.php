@@ -45,7 +45,6 @@ class CatalogueController extends Controller
          $catalogue = Catalogue::all();
 
          return $this->successResponse($catalogue);
-
     }
 
     /**
