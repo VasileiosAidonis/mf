@@ -17,7 +17,7 @@ class CreateBillingsTable extends Migration
             $table->increments('id');
             $table->string('card_type');
             $table->string('name');
-            $table->integer('number_16');
+            $table->BigInteger('number_16');
             $table->integer('number_3');
             $table->timestamps();
         });
