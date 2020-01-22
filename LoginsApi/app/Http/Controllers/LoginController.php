@@ -64,24 +64,17 @@ class LoginController extends Controller
       */
       $user_validate = Register::all();
 
-      $check1 = 'a';
-      $check2 = 'b';
       foreach ($user_validate as $user) {
           if($user->username == $request->username ){
-             $check1 = $user->id;
+              if($user->password == $request->password){
+                    $check = 'authorized';
+              }
           }
       }
 
-      foreach ($user_validate as $users) {
-          if($users->password == $request->password ){
-             $check2 = $users->id;
-          }
-      }
-
-      if ($check1 == $check2) {
+      if ($check == 'authorized') {
 
          $login = Login::create($request->all());
-
 
          return $this->successResponse($login, Response::HTTP_CREATED);
 
@@ -94,8 +87,6 @@ class LoginController extends Controller
 
         // TRying to return response with view to work on APIGATEWAY
         return view('login', ['error' => $error]);
-
-        return $error;
       }
     }
 

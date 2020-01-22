@@ -32,6 +32,15 @@ class BillingController extends Controller
         return view('billing');
     }
 
+    public function views_exist($billings)
+    {
+      $billings = Billing::findOrFail($billings);
+      //dd($billings->name);
+      return view('billing_exist', [
+          'billing' => $billings,
+      ]);
+    }
+
     /**
     * BACK END
     * Return the list of billings
@@ -52,7 +61,7 @@ class BillingController extends Controller
     */
     public function create()
     {
-        return view('billing');
+        //return view('billing');
     }
 
     /**
@@ -100,7 +109,7 @@ class BillingController extends Controller
     * @return Illuminate\Http\Response
     */
     public function update(Request $request, $billing)
-    {
+    {       dd('here');
         $rules = [
            'card_type' => 'max:11',
            'name' => 'max:255',
@@ -110,7 +119,8 @@ class BillingController extends Controller
 
         $this->validate($request, $rules);
 
-        $billing = Billing::findOrFail($billing);
+        $billing = Billing::find($billing);
+      //  dd($request->all());
 
         $billing->fill($request->all());
 

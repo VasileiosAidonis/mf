@@ -17,7 +17,10 @@
        <a class="navbar-brand d-flex pt-4">
           <div><img src="/svg/mf.svg" style="height:40px; border-right:2px solid #333;" class="pr-3 pl-5"></div>
           <div class="h2 pl-3">MyFlix</div>
-          <div class="h5 pr-5 d-flex justify-content-end"><a href="/">Home</div></a>
+       </a>
+       <a class="navbar-brand d-flex">
+         <div class="h4 d-flex justify-content-end" style="margin-right: 3%;"> <a href="/logins1" style="padding:4px; padding-bottom:5px; background-color: #660B32; color:white; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.15); opacity:94%; text-decoration: none; border:1px solid #240311; border-radius:8px;">Logout</a></div>
+         <div class="h5 pr-5 pb-1 d-flex justify-content-end"><a href="/">Home</a></div>
        </a>
        <div id="app">
            <div class="pt-1 text-center">
@@ -59,7 +62,7 @@
                </div>
            </div>
            <div class="h4 text-left pl-5 pb-1 pt-2">{{ $catalogue->where('id', 3)->first()->name ?? "Category Not Available" }}</div>
-           <div class="row pb-4">
+           <div class="row pb-5">
                <div class="col-3 w-100">
                   <div style="font-size:110%;">Big Buck Bunny</div><a href="/videos1/5"><img alt="BigBuckBunny.jpg" src="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x23406" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>
                </div>
