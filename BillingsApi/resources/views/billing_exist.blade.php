@@ -23,10 +23,15 @@
           </div>
           <div class="h2 pl-3 pr-4 justify-content-start" style="border-left:2px solid #333;">MyFlix</div>
         </a>
-        <a class="navbar-brand d-flex">
-          <div class="h4 d-flex justify-content-end" style="margin-right: 3%;"> <a href="/logins1" style=" padding:4px; padding-bottom:5px; background-color: #660B32; color:white; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.15); opacity:94%; text-decoration: none; border:1px solid #240311; border-radius:8px;"> Logout</a></div>
-          <div class="h5 pr-5 pb-1 d-flex justify-content-end"><a href="/">Home</a></div>
-        </a>
+        <div class="pt-1 d-flex">
+           <div class="pr-2" style="padding-top: 2px; margin-left:77%;">
+              <a href="/catalogues1/1" style="background-color: black; color:white; padding:7px; text-decoration:none; font-size:110%;  margin-right: 5px; border:1px solid black; border-radius:5px;"><strong>Catalogues</strong></a>
+           </div>
+           <div class="h4 pl-3" style="border-left:1px solid black;">
+              <a href="/logins1" style=" padding:4px; padding-bottom:5px; background-color: #660B32; color:white; box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.15); opacity:94%; text-decoration: none; border:1px solid #240311; border-radius:8px;"> Logout</a>
+           </div>
+        </div>
+        <div class="h5 pt-2 pr-5 pb-1 d-flex justify-content-end"><a href="/">Home</a></div>
 
          <div class="h5 pb-2 pt-2 pr-3 text-center"
               style="color: brown; border:1px solid #333; border-radius:10px; margin-left: 12%; margin-right: 12%;">
@@ -74,23 +79,18 @@
                        value="{{ $billing->number_3 }}"
                        required autocomplete="number_3">
             </div>
-            <div class="text-center" style="padding-top:80px; padding-bottom:280px;">
+            <div class="text-center" style="padding-top:50px; padding-bottom:280px;">
+                <div class="text-center">Form action doesn't support PUT method?</div>
                 <div class="pt-2 d-flex flex-row">
-                  <div style="margin-left:35%;"></div>
-                  <div style="width: 0; height: 0;border-top: 25px solid transparent;	border-right: 50px solid #F39831; border-bottom: 25px solid transparent;"></div>
-                  <div class="pl-3"></div>
+                   <div style="margin-left:45%;"></div>
                    <div style="padding:10px; background-color:#F39831; border:1px solid #331E05;">
-                      <a href="/catalogues1/1" style="color:#331E05; text-decoration:none; font-size:125%"><strong>Move to Catalogues</strong></a>
+                      <a href="#" style="color:#331E05; text-decoration:none; font-size:125%"><strong>Update</strong></a>
                    </div>
-                   <div class="pl-3"></div>
-                   <div style="width: 0; height: 0; border-top: 25px solid transparent;	border-left: 50px solid #F39831; border-bottom: 25px solid transparent;"></div>
                 </div>
             </div>
-
       <!--      <div class="pt-3 text-center" style="padding-bottom:375px;">
                  <button class="btn btn-primary">Update</button>
             </div>    -->
-
     </form>
   </div>
    <script src="dist/app.js"></script>
