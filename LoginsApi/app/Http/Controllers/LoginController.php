@@ -63,6 +63,7 @@ class LoginController extends Controller
       * Validate that user is already registered
       */
       $user_validate = Register::all();
+      $check = '';
 
       foreach ($user_validate as $user) {
           if($user->username == $request->username ){
