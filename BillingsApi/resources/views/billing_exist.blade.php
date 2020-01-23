@@ -15,7 +15,7 @@
        data-image-width="1024" data-image-height= auto;>
 
   <div class="container" style="background: white; opacity:94%;">
-    <form action="/billings/{billing}" enctype="multipart/form-data" method="GET">
+    <form action="/billings/{billing}" enctype="multipart/form-data" method="POST">
 
        <a class="navbar-brand d-flex pt-4">
           <div><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" height="40" id="svg" version="1.1" viewBox="0, 0, 400,214.22594142259413"  class="pr-3 pl-5">  <g id="svgg">
@@ -79,18 +79,9 @@
                        value="{{ $billing->number_3 }}"
                        required autocomplete="number_3">
             </div>
-            <div class="text-center" style="padding-top:50px; padding-bottom:280px;">
-                <div class="text-center">Form action doesn't support PUT method?</div>
-                <div class="pt-2 d-flex flex-row">
-                   <div style="margin-left:45%;"></div>
-                   <div style="padding:10px; background-color:#F39831; border:1px solid #331E05;">
-                      <a href="#" style="color:#331E05; text-decoration:none; font-size:125%"><strong>Update</strong></a>
-                   </div>
-                </div>
+            <div class="text-center" style="padding-top:40px; padding-bottom:300px;">
+                <button class="btn btn-warning btn-lg">Update</button>
             </div>
-      <!--      <div class="pt-3 text-center" style="padding-bottom:375px;">
-                 <button class="btn btn-primary">Update</button>
-            </div>    -->
     </form>
   </div>
    <script src="dist/app.js"></script>

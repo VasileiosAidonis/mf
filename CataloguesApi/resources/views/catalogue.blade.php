@@ -11,7 +11,7 @@
 
 <body>
 <div role="img" class="section-background-image"
-     style="background-position: 50% 50%; background-image: url(&quot;https://images.unsplash.com/photo-1578694025944-dbcbef810b26?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;cs=tinysrgb&amp;dpr=3&amp;h=1850&amp;w=860&quot;);"
+     style="background-position: 50% 50%; background-image: url(&quot;https://images.unsplash.com/photo-1578694025944-dbcbef810b26?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;cs=tinysrgb&amp;dpr=4&amp;h=1850&amp;w=550&quot;);"
      data-image-width="1024" data-image-height= auto;>
    <div class="container text-center" style="background-color: #E8E7E7; opacity:98%">
      <a class="navbar-brand d-flex pt-4">

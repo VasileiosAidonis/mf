@@ -12,9 +12,9 @@
 */
 
 $router->get('/billings', 'BillingController@index');
-// Create the data
-$router->get('/billings/create', 'BillingController@create');
 $router->post('/billings', 'BillingController@store');
+//Update with POST method
+$router->post('billings/{billing}','BillingController@storeupdate');
 $router->get('/billings/{billing}', 'BillingController@show');
 $router->put('/billings/{billing}', 'BillingController@update');
 $router->patch('/billings/{billing}', 'BillingController@update');

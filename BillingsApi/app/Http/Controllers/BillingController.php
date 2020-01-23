@@ -32,13 +32,16 @@ class BillingController extends Controller
         return view('billing');
     }
 
-    public function views_exist($billings)
+    public function views_exist(Request $request, $billings)
     {
-      $billings = Billing::findOrFail($billings);
-      //dd($billings->name);
-      return view('billing_exist', [
-          'billing' => $billings,
-      ]);
+       $session = $request->session();
+       $session->put('user_id', $billings);
+
+       $billings = Billing::findOrFail($billings);
+
+       return view('billing_exist', [
+           'billing' => $billings,
+       ]);
     }
 
     /**
@@ -53,15 +56,6 @@ class BillingController extends Controller
         $username = Config::get('constants.USERNAME');
 
         return $this->successResponse($billing);
-    }
-
-    /**
-    * create a billing
-    * @return Illuminate\Http\Response
-    */
-    public function create()
-    {
-        //return view('billing');
     }
 
     /**
@@ -85,6 +79,38 @@ class BillingController extends Controller
     }
 
     /**
+    * Update with POST one new billing
+    * @return Illuminate\Http\Response
+    */
+    public function storeupdate(Request $request, $billings)
+    {
+        //$session = $request->session();
+        //$billings = $session->get('user_id');
+
+        $rules = [
+            'card_type' => 'required|max:11',
+            'name' => 'required|max:255',
+            'number_16' => 'required|max:16|min:16',
+            'number_3' => 'required|max:3|min:3',
+        ];
+
+        $this->validate($request, $rules);
+
+        $billings = Billing::findOrFail($billings);
+
+        $billings->fill($request->all());
+
+        if ($billings->isClean())
+        {
+          return $this->errorResponse('At least one value must change',
+                        Response::HTTP_UNPROCESSABLE_ENTITY);
+        }
+        $billings->save();
+
+        return $this->successResponse($billings);
+    }
+
+    /**
     * Obtains and show one billing
     * @return Illuminate\Http\Response
     */
@@ -93,13 +119,6 @@ class BillingController extends Controller
         $billing = Billing::findOrFail($billing);
 
         $username = Config::get('constants.USERNAME');
-        //$username1 = "NoName";
-
-  //      return view('billing', [
-  //          'billing' => $billing,
-  //          'username' => $username,
-  //          //'username1' => $username1,
-  //      ]);
 
         return $this->successResponse($billing);
     }
@@ -109,7 +128,7 @@ class BillingController extends Controller
     * @return Illuminate\Http\Response
     */
     public function update(Request $request, $billing)
-    {       dd('here');
+    {
         $rules = [
            'card_type' => 'max:11',
            'name' => 'max:255',
