@@ -49,11 +49,20 @@ class BillingController extends Controller
     * Return the list of billings
     * @return Illuminate\Http\Response
     */
-    public function index()
+    public function index(Request $request)
     {
         $billing = Billing::all();
 
-        $username = Config::get('constants.USERNAME');
+        return $this->successResponse($billing);
+    }
+
+    /**
+    * Used to pass username to the catalogues 
+    * @return Illuminate\Http\Response
+    */
+    public function create(Request $request)
+    {
+        $billing = Billing::all();
 
         return $this->successResponse($billing);
     }

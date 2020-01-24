@@ -28,10 +28,15 @@ class CatalogueController extends Controller
     */
     public function views($catalogues)
     {
+      $user_username = $catalogues;
+
+      $catalogues = '1';
+
       $catalogues = Catalogue::findOrFail($catalogues);
 
       return view('catalogue', [
           'catalogue' => $catalogues,
+          'user' => $user_username,
       ]);
     }
 
