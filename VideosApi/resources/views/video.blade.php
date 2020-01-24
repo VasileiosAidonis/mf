@@ -24,7 +24,7 @@
        <div class="h2 pl-3 pr-4 justify-content-start" style="border-left:2px solid #333;">MyFlix</div>
     </a>
     <div class="h5 pr-5 d-flex justify-content-end"><a href="/">Home</a></div>
-    
+
     <div class="d-flex">
         <div class="pl-1" style=""><img src="{{ $video->image }}" decoding="async" style="height:70px; width:90px;"></div>
         <div class="h3 pt-4" style="margin-left: 50px;"> &#10077; {{ $video->name }} &#10078; </div>
@@ -74,14 +74,11 @@
          @endforeach
        </div>
     </div>
-    <div class="text-center" style="font-size:150%; padding-top:120px; padding-bottom:70px;">
-       <div style="border:2px solid #B5127E; margin-left:38%; margin-right:38%; background-color: #B5127E; border-radius:20px;">
-          <a href="/catalogues1/1" style="color:white;">
-             Back to catalogues
-          </a>
-       </div>
-    </div>
-
+    <form action="/videos/video" enctype="multipart/form-data" method="GET">
+      <div class="text-center" style="font-size:150%; padding-top:120px; padding-bottom:70px;">
+         <button class="p-1 pl-4 pr-4"style="background-color: #B5127E; color:white; border-radius:25px; ">Back to Catalogues</button>
+      </div>
+    </form>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
     <script src="http://vjs.zencdn.net/5.10.2/video.js"></script>
     <script src="//cdn.sc.gl/videojs-hotkeys/0.2/videojs.hotkeys.min.js"></script>

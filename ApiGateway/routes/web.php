@@ -32,7 +32,6 @@ $router->delete('/registers/{register}', 'RegisterController@destroy');
 /**
 * Routes for the billings
 */
-//$router->get('/billings', 'BillingController@index');
 $router->get('/billings', 'BillingController@index');
 $router->get('/billings/create', 'BillingController@create');
 //Update with POST method
@@ -57,6 +56,8 @@ $router->delete('/catalogues/{catalogue}', 'CatalogueController@destroy');
 * Routes for the videos
 */
 $router->get('/videos','VideoController@index');
+$router->get('/videos/video','VideoController@username');
+
 $router->post('/videos','VideoController@store');
 $router->get('/videos/{video}','VideoController@show');
 $router->put('/videos/{video}','VideoController@update');

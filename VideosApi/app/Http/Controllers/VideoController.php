@@ -53,6 +53,18 @@ class VideoController extends Controller
     }
 
     /**
+    * Return the username to catalogues
+    * @return Illuminate\Http\Response
+    */
+    public function username(Request $request)
+    {  dd("here");
+       $video = Video::all();
+
+      return $this->successResponse($video);
+       //return view('app');
+    }
+
+    /**
     * Create one new video
     * @return Illuminate\Http\Response
     */

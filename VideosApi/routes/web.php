@@ -15,6 +15,8 @@
 * Route to show videos
 */
 $router->get('/videos','VideoController@index');
+$router->get('/videos/video','VideoController@username');
+
 $router->post('/videos','VideoController@store');
 $router->get('/videos/{video}','VideoController@show');
 $router->put('/videos/{video}','VideoController@update');

@@ -35,7 +35,7 @@ class VideoService
     public function obtainVideos()
     {
         return $this->performRequest('GET','/videos');
-    }
+    }    
 
     /**
     * Create one video from the video service
