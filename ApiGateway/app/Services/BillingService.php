@@ -45,16 +45,7 @@ class BillingService
     public function obtainBillings()
     {
         return $this->performRequest('GET','/billings');
-    }
-
-    /**
-    * Used to pass username to catalogues
-    * @return string
-    */
-    public function createBill($data)
-    {
-        return $this->performRequest('GET','/billings/create', $data);
-    }
+    }    
 
     /**
     * Create one billing from the billing service
