@@ -80,6 +80,7 @@
                        value="{{ $billing->number_3 }}"
                        required autocomplete="number_3">
             </div>
+            <div>{{ $errors ?? ''}}</div>
             <div class="text-center" style="padding-top:40px; padding-bottom:300px;">
                 <button class="btn btn-warning btn-lg">Update</button>
             </div>

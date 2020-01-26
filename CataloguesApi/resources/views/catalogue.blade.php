@@ -40,7 +40,16 @@
               </div>
            </div>
 
-           <div class="h4 text-left pl-5 pb-1 pt-1">{{ $catalogue->where('id', 1)->first()->name ?? "Category Not Available" }}</div>
+           <form class="d-flex "  action="/catalogues/{catalogue}" enctype="multipart/form-data" method="POST">
+              <div class="h4 text-left pl-5 pb-1 pt-1">{{ $catalogue->where('id', 1)->first()->name ?? "Category Not Available" }}</div>
+              <div class="pt-2 pl-2"><?php if($catalogue->where('id', 1)->first()->thumbnail == 1){ ?>
+                    <button style="background-color:blue;"><div style="opacity: 0%;">*<div></button>
+                    <?php }else{?>
+                    <button style="background-color: red; "><div style="opacity: 0%;">*<div></button>
+              <?php }; ?>
+              </div>
+           </form>
+
            <div class="row pb-4">
                <div class="col-3 w-100">
                   <div style="font-size:110%;">Oceans</div><a href="/videos1/1"><img alt="Ocean.jpg" src="http://vjs.zencdn.net/v/oceans.png" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>

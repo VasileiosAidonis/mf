@@ -59,6 +59,7 @@ class CatalogueController extends Controller
         return redirect()->route('billings_exist',[
                    'billings_exist' => $user,
         ]);
+        
         return $this->successResponse($this->catalogueService->obtainCatalogues());
     }
 

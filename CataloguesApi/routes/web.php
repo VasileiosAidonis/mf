@@ -15,6 +15,8 @@ $router->get('/catalogues', 'CatalogueController@index');
 $router->post('/catalogues', 'CatalogueController@store');
 $router->get('/catalogues/{catalogue}', 'CatalogueController@show');
 $router->put('/catalogues/{catalogue}', 'CatalogueController@update');
+//Thumbnails
+$router->post('/catalogues/{catalogue}', 'CatalogueController@update_thumb');
 $router->patch('/catalogues/{catalogue}', 'CatalogueController@update');
 $router->delete('/catalogues/{catalogue}', 'CatalogueController@destroy');
 

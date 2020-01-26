@@ -60,6 +60,7 @@ class CatalogueController extends Controller
     {
          $rules =[
            'name' => 'required|max:255',
+           'thumbnail' =>'required',
          ];
 
          $this->validate($request, $rules);
@@ -76,9 +77,6 @@ class CatalogueController extends Controller
     */
     public function show($catalogues)
     {
-        //$catalogues = Catalogue::where('id', 1)->first();
-        //dd($catalogues->where('id', 3)->first()->name);
-
         $catalogues = Catalogue::findOrFail($catalogues);
 
         return $this->successResponse($catalogues);
@@ -91,7 +89,8 @@ class CatalogueController extends Controller
     public function update(Request $request, $catalogue)
     {
         $rules =[
-         'name' => 'required|max:255',
+         'name' => 'max:255',
+         'thumbnail' => '',
         ];
 
         $this->validate($request, $rules);
@@ -108,6 +107,47 @@ class CatalogueController extends Controller
         $catalogue->save();
 
         return $this->successResponse($catalogue);
+    }
+
+    /**
+    * Update the thumbnail
+    * @return Illuminate\Http\Response
+    */
+    public function update_thumb(Request $request, $catalogues)
+    {
+        $user_username = $catalogues;
+
+        $catalogues = '1';
+
+        $catalogues = Catalogue::findOrFail($catalogues);
+
+
+        if ($catalogues->thumbnail == false){
+
+            $catalogues->thumbnail = true;
+            //dd('changed to true');
+        } else{
+
+            $catalogues->thumbnail = false;
+            //dd($catalogues);
+        }
+         $catalogues->save();
+//dd($catalogues);
+return view('catalogue', [
+    'catalogue' => $catalogues,
+    'user' => $user_username,
+]);
+        $catalogue->fill($request->all());
+
+        $catalogue->save();
+        $user_username = $catalogues;
+
+
+
+
+
+
+        //return $this->successResponse($catalogue);
     }
 
 

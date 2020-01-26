@@ -14,5 +14,6 @@ class Catalogue extends Model
      */
     protected $fillable = [
         'name',
+        'thumbnail',
     ];
 }

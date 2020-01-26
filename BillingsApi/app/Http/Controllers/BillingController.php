@@ -35,12 +35,16 @@ class BillingController extends Controller
     public function views_exist(Request $request, $billings)
     {
        $session = $request->session();
+
        $session->put('user_id', $billings);
 
+       $errors = $session->get('errors');
+//dd($errors);
        $billings = Billing::findOrFail($billings);
 
        return view('billing_exist', [
            'billing' => $billings,
+        //   'errors' => $errors
        ]);
     }
 
@@ -57,7 +61,7 @@ class BillingController extends Controller
     }
 
     /**
-    * Used to pass username to the catalogues 
+    * Used to pass username to the catalogues
     * @return Illuminate\Http\Response
     */
     public function create(Request $request)
@@ -109,12 +113,17 @@ class BillingController extends Controller
 
         $billings->fill($request->all());
 
+        $session = $request->session();
+
         if ($billings->isClean())
         {
-          return $this->errorResponse('At least one value must change',
-                        Response::HTTP_UNPROCESSABLE_ENTITY);
+           $session->put('errors', 'At least one value must change');
+
+           return $this->successResponse('At least one value must change');
         }
         $billings->save();
+
+        $session->put('errors','NO');
 
         return $this->successResponse($billings);
     }

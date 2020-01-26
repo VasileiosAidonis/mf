@@ -27,7 +27,7 @@ $app = new Laravel\Lumen\Application(
 
  $app->withEloquent();
 
- $app->configure('session');
+
 
  /**
  * Using config files in lumen
@@ -67,7 +67,7 @@ $app->singleton(
 | route or middleware that'll be assigned to some specific routes.
 |
 */
-
+ $app->configure('session');
 /**
 * Adding Sessions to lumen
 */
@@ -76,10 +76,19 @@ $app->bind(Illuminate\Session\SessionManager::class, function ($app) {
 });
 
 $app->middleware([
-    'Illuminate\Session\Middleware\StartSession'
+  'Illuminate\Session\Middleware\StartSession'
 ]);
 
 $app->register(Illuminate\Session\SessionServiceProvider::class);
+
+
+// $app->middleware([
+//     App\Http\Middleware\ExampleMiddleware::class
+// ]);
+
+// $app->routeMiddleware([
+//     'auth' => App\Http\Middleware\Authenticate::class,
+// ]);
 
 /*
 |--------------------------------------------------------------------------
