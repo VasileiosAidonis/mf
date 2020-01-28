@@ -113,43 +113,29 @@ class CatalogueController extends Controller
     * Update the thumbnail
     * @return Illuminate\Http\Response
     */
-    public function update_thumb(Request $request, $catalogues)
+    public function update_thumb(Request $request, $thumb, $catalogues)
     {
         $user_username = $catalogues;
 
-        $catalogues = '1';
+        $catalogues = $thumb;
 
         $catalogues = Catalogue::findOrFail($catalogues);
 
-
         if ($catalogues->thumbnail == false){
 
-            $catalogues->thumbnail = true;
-            //dd('changed to true');
+              $catalogues->thumbnail = true;
         } else{
 
-            $catalogues->thumbnail = false;
-            //dd($catalogues);
+              $catalogues->thumbnail = false;
         }
-         $catalogues->save();
-//dd($catalogues);
-return view('catalogue', [
-    'catalogue' => $catalogues,
-    'user' => $user_username,
-]);
-        $catalogue->fill($request->all());
 
-        $catalogue->save();
-        $user_username = $catalogues;
+        $catalogues->save();
 
-
-
-
-
-
-        //return $this->successResponse($catalogue);
+         return view('catalogue', [
+              'catalogue' => $catalogues,
+              'user' => $user_username,
+         ]);
     }
-
 
     /**
     * Delete a name in catalague

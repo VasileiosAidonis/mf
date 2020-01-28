@@ -40,14 +40,17 @@
               </div>
            </div>
 
-           <form class="d-flex "  action="/catalogues/{catalogue}" enctype="multipart/form-data" method="POST">
-              <div class="h4 text-left pl-5 pb-1 pt-1">{{ $catalogue->where('id', 1)->first()->name ?? "Category Not Available" }}</div>
-              <div class="pt-2 pl-2"><?php if($catalogue->where('id', 1)->first()->thumbnail == 1){ ?>
-                    <button style="background-color:blue;"><div style="opacity: 0%;">*<div></button>
+           <form class="d-flex"  action="/catalogues1/{catalogue}/1" enctype="multipart/form-data" method="POST">
+              <div class="h4 text-left pb-1 pt-1" style="padding-left:40px;">{{ $catalogue->where('id', 1)->first()->name ?? "Category Not Available" }}</div>
+              <div class="pt-2 pl-2">
+                <?php if($catalogue->where('id', 1)->first()->thumbnail == 1){ ?>
+                    <button style="width: 25px; height: 30px; background: #0E9116; position: relative;
+                                   -moz-border-radius: 10px;  -webkit-border-radius: 10px; border-radius: 10px;"><div style="color:white; opacity: 100%;">&check; </div></button>
                     <?php }else{?>
-                    <button style="background-color: red; "><div style="opacity: 0%;">*<div></button>
-              <?php }; ?>
-              </div>
+                    <button style="width: 25px; height: 30px; background: #C3B8B8; position: relative;
+                                   -moz-border-radius: 10px;  -webkit-border-radius: 10px; border-radius: 10px;"><div style="color:#F2F2F2; width:10px; bottom:10px;">&check;</div></button>
+                <?php }; ?>
+            </div>
            </form>
 
            <div class="row pb-4">
@@ -64,7 +67,20 @@
                   <div style="color:red">Not Available</div><img alt="VideoNotAvailable.jpg" src="https://image.flaticon.com/icons/svg/813/813734.svg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999; background-color: white;">
                </div>
            </div>
-           <div class="h4 text-left pl-5 pb-1 pt-2">{{ $catalogue->where('id', 2)->first()->name ?? "Category Not Available" }}</div>
+
+           <form class="d-flex"  action="/catalogues1/{catalogue}/2" enctype="multipart/form-data" method="POST">
+              <div class="h4 text-left pb-1 pt-1" style="padding-left:40px;">{{ $catalogue->where('id', 2)->first()->name ?? "Category Not Available" }}</div>
+              <div class="pt-2 pl-2">
+                <?php if($catalogue->where('id', 2)->first()->thumbnail == 1){ ?>
+                    <button style="width: 25px; height: 30px; background: #0E9116; position: relative;
+                                   -moz-border-radius: 10px;  -webkit-border-radius: 10px; border-radius: 10px;"><div style="color:white; opacity: 100%;">&check; </div></button>
+                    <?php }else{?>
+                    <button style="width: 25px; height: 30px; background: #C3B8B8; position: relative;
+                                   -moz-border-radius: 10px;  -webkit-border-radius: 10px; border-radius: 10px;"><div style="color:#F2F2F2; width:10px; bottom:10px;">&check;</div></button>
+                <?php }; ?>
+             </div>
+           </form>
+
            <div class="row  pb-4">
                <div class="col-3 w-100">
                   <div style="font-size:110%;">Elephants Dream</div><a href="/videos1/2"><img alt="Elephants_dream.jpg" src="http://d2zihajmogu5jn.cloudfront.net/elephantsdream/poster.png" decoding="async" width="220" height="290" data-file-width="259" data-file-height="290" style="border:1px solid #9999;"></a>
@@ -79,7 +95,20 @@
                   <div style="color:red;">Not Available</div><img alt="VideoNotAvailable.jpg" src="https://image.flaticon.com/icons/svg/813/813734.svg" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999; background-color: white;">
                </div>
            </div>
-           <div class="h4 text-left pl-5 pb-1 pt-2">{{ $catalogue->where('id', 3)->first()->name ?? "Category Not Available" }}</div>
+
+           <form class="d-flex"  action="/catalogues1/{catalogue}/3" enctype="multipart/form-data" method="POST">
+              <div class="h4 text-left pb-1 pt-1" style="padding-left:40px;">{{ $catalogue->where('id', 3)->first()->name ?? "Category Not Available" }}</div>
+              <div class="pt-2 pl-2">
+                <?php if($catalogue->where('id', 3)->first()->thumbnail == 1){ ?>
+                    <button style="width: 25px; height: 30px; background: #0E9116; position: relative;
+                                   -moz-border-radius: 10px;  -webkit-border-radius: 10px; border-radius: 10px;"><div style="color:white; opacity: 100%;">&check; </div></button>
+                    <?php }else{?>
+                    <button style="width: 25px; height: 30px; background: #C3B8B8; position: relative;
+                                   -moz-border-radius: 10px;  -webkit-border-radius: 10px; border-radius: 10px;"><div style="color:#F2F2F2; width:10px; bottom:10px;">&check;</div></button>
+                <?php }; ?>
+             </div>
+           </form>
+
            <div class="row pb-5">
                <div class="col-3 w-100">
                   <div style="font-size:110%;">Big Buck Bunny</div><a href="/videos1/5"><img alt="BigBuckBunny.jpg" src="https://peach.blender.org/wp-content/uploads/bbb-splash.png?x23406" decoding="async" width="220" height="290" data-file-width="220" data-file-height="290" style="border:1px solid #9999;"></a>

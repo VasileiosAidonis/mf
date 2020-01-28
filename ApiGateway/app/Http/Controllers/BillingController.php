@@ -140,12 +140,12 @@ class BillingController extends Controller
        $check = $this->successResponse($this->billingService->
                           updateBilling($request->all(),$billing));
 
-      $errors = json_decode($check->content(), true);
-      $errors = array_shift($errors);
-      //$billing = [$billing, $errors];
+       $errors = json_decode($check->content(), true);
+       $errors = array_shift($errors);
+       //$billing = [$billing, $errors];
 
-      if ($check->status() == 200)
-      {
+       if ($check->status() == 200)
+       {
            return redirect()->route('billings_exist',[
                      'billings_exist' => $billing,
                      'errors' => $errors

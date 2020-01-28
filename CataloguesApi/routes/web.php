@@ -14,9 +14,6 @@
 $router->get('/catalogues', 'CatalogueController@index');
 $router->post('/catalogues', 'CatalogueController@store');
 $router->get('/catalogues/{catalogue}', 'CatalogueController@show');
-$router->put('/catalogues/{catalogue}', 'CatalogueController@update');
-//Thumbnails
-$router->post('/catalogues/{catalogue}', 'CatalogueController@update_thumb');
 $router->patch('/catalogues/{catalogue}', 'CatalogueController@update');
 $router->delete('/catalogues/{catalogue}', 'CatalogueController@destroy');
 
@@ -24,10 +21,7 @@ $router->delete('/catalogues/{catalogue}', 'CatalogueController@destroy');
 * Route for Views
 */
 $router->get('/catalogues1/{catalogue}', 'CatalogueController@views');
-
-/**
-* router for vue view
-*/
-//$router->get('/catalogues', function ()  {
-//    return view('catalogue');
-//});
+//Thumbnails
+$router->post('/catalogues1/{catalogue}/{thumb}', [
+  'as' => 'catalogues_thumb', 'uses' => 'CatalogueController@update_thumb'
+]);
